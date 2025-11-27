@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface BillRepository extends JpaRepository<Bill,Long> {
 
-    @Query(value = "select id as id, bill_name as billName, created_at as createdAt from bill", nativeQuery = true)
+    @Query(value = "select id as id, bill_name as billName, created_at as createdAt from bill order by created_at desc ", nativeQuery = true)
     List<BillHistoryDto> getBillHistory();
 
 }

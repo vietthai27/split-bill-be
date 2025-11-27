@@ -10,10 +10,10 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Apply to all endpoints
-                .allowedOrigins("http://localhost:3000", "https://split-bill-b5fj.onrender.com") // Allowed frontends
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allowed HTTP methods
-                .allowedHeaders("*") // Allowed headers
-                .allowCredentials(true) // Allow cookies/auth headers
-                .maxAge(3600); // Cache preflight response for 1 hour
+                .allowedOrigins("http://localhost:3000", "https://split-bill-b5fj.onrender.com")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true)
+                .maxAge(3600);
     }
 }
